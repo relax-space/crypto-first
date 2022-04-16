@@ -39,14 +39,14 @@ def call_en():
 
 
 def call_de():
-    text = 'hFsaNOHoCwp4I3+MicxRQTLiyeIwIALznU6YEuLcAmFyts3Yt9IfHc/JY94i4NVzyXMCfL2gaW88KskGpnUPl35HcLzMZJfohnaiu5/m/6ObssUfugjS/0UlGgcOJsb5ZFptWNFXuLJQzvyZc5WD9t/Zf/yRynRBdSHG4GMN2+fcGCsiP5uhm2ZYrx0UTjL1KwpryPim8jPMNztj+h6ehwQmqAiRCohtOsssw40csh++yqQJqXECiiJ/9mmcI0Fe'
-    key = '36606EE9A59DDCE2'
-    iv = '057f1eed099f2f7e'
+    text = 'HCizZLcgJfm1LvajcEBMHChheUySaJgXpuPL+L9BDW4jdd9ds5qCycVwN6SpotDujY/tok+sT2M//AeeKnDk6TrZ0gvFa1szUi8j3xg2TTZXZMW/52wuXhr1vnxrbrz4socZ2twSY1T63NiJx3XAcLe6RXfSmBxuPzstMQ0pDSSDNPT4H5hKYy1wo227zzcnxdAuwo1WTvcdaMIuXBS/9IkbqNFklzikvvdGjJjsVxRLwSd5T6v4I47CUAgVtncxpf3cKlM37lmEWpZwskJKG/IGkJRRy9K2a/tdIMWNu0JbsF0jlyMNT/kT2OS08jsRsGJPxOnpEiFIPgE6UPGUgq7+SaBHvFdSfusdqDTwBHuyXJTZBixolYEnggfr3UfWOtP1pvWR4R7bY2N7XJ7gEf6QMfjbu0YB1V4+2WX5ucy43954EniGFbUw2Zxi35y+OGgkpunPTzccVbGw871RjiU7iNVo+IXvQHgG+0FPjaWUezWYm4YAePohtxJYAqg+1XATcgFOKTUn21QQCDKAuQ=='
+    key = '0EAE7A71512EC09C'
+    iv = '675480787382e6f4'
     aes = CryptoR(key, iv)
     d1 = aes.decrypto(text)
     d2 = crypto_js('decrypt', text, key, iv)
     d2 = unpad(d2.encode('utf8'), AES.block_size).decode('utf8')
-    d3 = 'https://json.nbjx.vip:4399/hls/4b7ce0c8460c437037918dcb5f3a8818.m3u8?vkey=c097V4ps90g9CpK5DX70N07deE2YIE-4i8wTq574P1YnQ68pv-rQGNV2wW0mHWsvBwClWONt_K5jIimrTiuQ3xrifwDMSYGDjUdskwLH2X9J2n-OnA'
+    d3 = 'https://subtitle.apdcdn.tc.qq.com/vipzj.video.tc.qq.com/gzc_1000102_0b53o4aagaaa2eaerjcv5zrma56dan5qab2a.f2.mp4?vkey=5DD8A1F1C4657D16EE8F61CEA9D4FEDF5195B3F0404A4104E6877F4D61D6DF3F02B8EA021782BFF03319989D91AF586088584D8DB58C6908C6B83C02137CE54CB3F09873AC784EFB2D24A2A4D041757D7E753A5523BB08AC010E33F4DD1F8A16F8266900BA457AF5223DB94A6187A6280CEA7CCA4BF76EDC&QQ=335583&From=www.nxflv.com'
     assert d1 == d2 == d3, 'decrypto error'
 
 
